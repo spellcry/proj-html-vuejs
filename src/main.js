@@ -4,6 +4,8 @@ import App from './App.vue'
 
 /* import Open Sans from Fontsource */
 import "@fontsource/inter"
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/900.css";
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -12,17 +14,13 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(faMagnifyingGlass)
-library.add(faChevronDown)
-library.add(faBagShopping)
+library.add(faUser)
 library.add(faFacebookF)
 library.add(faTwitter)
 library.add(faLinkedinIn)

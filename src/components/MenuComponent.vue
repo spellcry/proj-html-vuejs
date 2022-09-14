@@ -1,6 +1,6 @@
 <template>
-    <menu>
-        <li v-for="(element, index) in menu" :key="index">
+    <menu class="menu">
+        <li v-for="(element, index) in menu" :key="index" :class="[element.selected ? 'selected' : '', 'item']">
             <template v-if="isText(element)">{{ element.text }}</template>
             <template v-if="isIcon(element)"><font-awesome-icon :icon="element.icon" /></template>
             <template v-if="isTextAccent(element)"><span class="btn">{{ element.textAccent }}</span></template>
@@ -49,5 +49,17 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    @import '../styles/variables';
+
+    .menu {
+        display: flex;
+        gap: $menu-gap;
+        .item {
+            cursor: pointer;
+            &.selected,
+            &:hover {
+                color: $green;
+            }
+        }
+    }
 </style>

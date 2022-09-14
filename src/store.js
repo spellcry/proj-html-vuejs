@@ -2,14 +2,29 @@ import Vue from 'vue'
 
 const state = Vue.observable({
     mainMenu: [
-        { text: 'Demos' },
-        { text: 'Pages' },
-        { text: 'Portfolio' },
-        { text: 'Blog' },
-        { text: 'Shop' },
-        { icon: 'fa-solid fa-magnifying-glass' },
-        { icon: 'fa-solid fa-bag-shopping' },
-        { textAccent: 'Buy Nexgen' },
+        { 
+            text: 'Home',
+            selected: false, 
+        },
+        { 
+            text: 'About',
+            selected: false, 
+        },
+        { 
+            text: 'Projects',
+            selected: false, 
+        },
+        { 
+            text: 'Process',
+            selected: true, 
+        },
+        { 
+            text: 'Testimonials',
+            selected: false, 
+        },
+        { 
+            icon: 'fa-regular fa-user' 
+        },
     ],
     contentMenu: [
         { text: 'All' },
