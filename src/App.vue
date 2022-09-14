@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-
+    <HeroComponent/>
   </div>
 </template>
 
 <script>
+  import HeroComponent from './components/HeroComponent.vue';
 
-export default {
-  name: 'App',
-  components: {
-    
+  export default {
+    name: 'App',
+    components: {
+      HeroComponent,
+    }
   }
-}
 </script>
 
 <style lang="scss">
-
+  @import './styles/index.scss';
 </style>
