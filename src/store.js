@@ -27,13 +27,34 @@ const state = Vue.observable({
         },
     ],
     contentMenu: [
-        { text: 'All' },
-        { text: 'Environment' },
-        { text: 'Events' },
-        { text: 'Institutional' },
-        { text: 'Social' },
-        { text: 'Technology' },
-        { text: 'Innovation' },
+        { 
+            text: 'All', 
+            selected: true,
+        },
+        { 
+            text: 'Institutional', 
+            selected: false,
+        },
+        { 
+            text: 'Social', 
+            selected: false,
+        },
+        { 
+            text: 'Events', 
+            selected: false,
+        },
+        { 
+            text: 'Innovation', 
+            selected: false,
+        },
+        { 
+            text: 'Environment', 
+            selected: false,
+        },
+        { 
+            text: 'Technology', 
+            selected: false,
+        },
     ],
     contacts: {
         open: 'Open Hours: Mon - Sat - 9:00 - 18:00',
@@ -64,35 +85,41 @@ const state = Vue.observable({
     cardsTitle: [
         {
             title: 'Academic professional program in social media',
+            img: 'project-1.jpg',
         },
         {
             title: 'President\'s speech at the annual meeting',
+            img: 'project-2.jpg',
         },
         {
             title: 'International business trip in Shanghai',
+            img: 'project-3.jpg',
         },
         {
             title: 'Technology workshop with education theme',
+            img: 'project-4.jpg',
         },
         {
             title: 'Donation of clothes and food to the partner NGO',
+            img: 'project-5.jpg',
         },
         {
             title: 'Confraternization of the procurement team',
+            img: 'project-6.jpg',
         },
     ],
     cardsImgText: [
         {
             img: 'logo-1.png',
-            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         },
         {
             img: 'logo-2.png',
-            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         },
         {
             img: 'logo-3.png',
-            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         },
     ],
 });

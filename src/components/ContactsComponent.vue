@@ -64,7 +64,7 @@
     @import '../styles/variables';
 
     .contacts {
-        background-color: $darker-green;
+        background-color: $dark-grey;
         color: $light-grey;
         padding-block: 1rem;
         .container {

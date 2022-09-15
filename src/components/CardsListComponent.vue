@@ -1,11 +1,9 @@
 <template>
-    <div class="container">
-        <ul class="cards-list">
-            <li v-for="(card, index) in cards" :key="index" class="list-item">
-                <CardComponent :type="type" :card="card"/>
-            </li>
-        </ul>
-    </div>
+    <ul :class="[type,'cards-list']">
+        <li v-for="(card, index) in cards" :key="index" class="list-item">
+            <CardComponent :type="type" :card="card"/>
+        </li>
+    </ul>
 </template>
 
 <script>
@@ -34,13 +32,13 @@
             return cards;
         },
         isCardsIconTitleText() {
-            return this.type === "iconTitleText";
+            return this.type === "icon-title-text";
         },
         isCardsTitle() {
             return this.type === "title";
         },
         isCardsImgText() {
-            return this.type === "imgText";
+            return this.type === "img-text";
         },
     },
     components: { 
@@ -50,5 +48,21 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    @import '../styles/variables';
+
+    .cards-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $cards-gap;
+        &.title {
+            .list-item {
+                overflow: hidden;
+            }
+        }
+        .list-item {
+            flex-basis: calc(calc(100% - calc($cards-gap * 2)) / 3);
+            background-color: white;
+            border-radius: 10px;        
+        }
+    }
 </style>

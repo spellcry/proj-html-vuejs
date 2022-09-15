@@ -33,3 +33,8 @@ body {
     cursor: pointer;
     border: 1px solid $green;
 }
+
+.accent {
+    padding: 3px 15px;
+    background-color: rgba($color: $green, $alpha: 0.15);
+}

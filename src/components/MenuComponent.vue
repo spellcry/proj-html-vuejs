@@ -1,5 +1,5 @@
 <template>
-    <menu class="menu">
+    <menu :class="[type, 'menu']">
         <li v-for="(element, index) in menu" :key="index" :class="[element.selected ? 'selected' : '', 'item']">
             <template v-if="isText(element)">{{ element.text }}</template>
             <template v-if="isIcon(element)"><font-awesome-icon :icon="element.icon" /></template>
@@ -59,6 +59,25 @@
             &.selected,
             &:hover {
                 color: $green;
+            }
+        }
+        &.content-menu {
+            .item {
+                position: relative;
+                &.selected {
+                    color: white;
+                }
+                &.selected::before {
+                    content: '';
+                    position: absolute;
+                    top: -10px;                    
+                    right: -10px;                    
+                    bottom: -10px;                    
+                    left: -10px;
+                    background-color: rgba($color: $green, $alpha: 0.15);
+                    border-radius: 3px;
+                    z-index: 1;
+                }
             }
         }
     }

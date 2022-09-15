@@ -2,19 +2,25 @@
     <main class="main-content">
         <HeroComponent/>
         <section class="strengths">
-            <CardsListComponent type="iconTitleText"/>
+            <div class="container">
+                <CardsListComponent type="icon-title-text"/>
+            </div>
         </section>
         <section class="actions-projects">
-            <h4 class="pre-title">We do more for everyone</h4>
-            <h2 class="title">Actions & Projects</h2>
-            <MenuComponent type="content-menu"/>
-            <CardsListComponent type="title"/>
+            <div class="container">
+                <h4 class="pre-title">We do more for everyone</h4>
+                <h2 class="title">Actions & <span class="accent">Projects</span></h2>
+                <MenuComponent type="content-menu"/>
+                <CardsListComponent type="title"/>
+            </div>
         </section>
         <section class="feedback">
-            <h4 class="pre-title">Customer Testimonials</h4>
-            <h2 class="title">Trusted Feedback</h2>
-            <p class="text">We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</p>
-            <CardsListComponent type="imgText"/>
+            <div class="container">
+                <h4 class="pre-title">Customer Testimonials</h4>
+                <h2 class="title">Trusted <span class="accent">Feedback</span></h2>
+                <p class="text">We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</p>
+                <CardsListComponent type="img-text"/>
+            </div>
         </section>
     </main>
 </template>
@@ -34,5 +40,57 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    @import '../styles/variables';
+    .pre-title {
+        text-transform: uppercase;
+        color: $green;
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        margin-bottom: 4rem;
+        font-size: 3rem;                
+    }
+    .strengths {
+        background-color: $light-green;
+    }
+    .actions-projects {
+        background-color: $dark;
+        .container {
+            color: white;
+            .menu {
+                text-transform: uppercase;
+                margin-bottom: 3rem;
+                color: $light-grey;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .feedback {
+        background-color: $light-green;
+        .title {
+            margin-bottom: 2rem;
+            .accent {
+                color: $green;
+            }
+        }
+        .text {
+            margin-bottom: 3rem;
+            max-width: 65%;
+            text-align: center;            
+        }
+    }
+    .strengths,
+    .actions-projects,
+    .feedback {
+        padding-block: $section-padding-block;
+    }
+
+    .actions-projects,
+    .feedback {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 </style>
