@@ -72,7 +72,6 @@
                 gap: 1.5rem;
                 .light {
                     background-color: transparent;
-                    border: 1px solid $green;
                 }
             }
         }

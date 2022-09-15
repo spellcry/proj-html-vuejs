@@ -44,6 +44,57 @@ const state = Vue.observable({
         linkedin: '#',
         copyright: '© 2022 NEXGEN is Proudly Powered by Codings.',
     },
+    cardsIconTitleText: [
+        {
+            icon: 'fa-solid fa-user-group',
+            title: 'Human Capital',
+            text: 'Humanizing business: Harness the power of technology to improve the way people work.',
+        },
+        {
+            icon: 'fa-solid fa-chart-pie',
+            title: 'Core Business',
+            text: 'It takes innovative approaches to transform, modernize, and run existing platforms.',
+        },
+        {
+            icon: 'fa-solid fa-gauge-high',
+            title: 'Performance',
+            text: 'Achieving maximum impact and value from investments in finance and supply chain.',
+        },
+    ],
+    cardsTitle: [
+        {
+            title: 'Academic professional program in social media',
+        },
+        {
+            title: 'President\'s speech at the annual meeting',
+        },
+        {
+            title: 'International business trip in Shanghai',
+        },
+        {
+            title: 'Technology workshop with education theme',
+        },
+        {
+            title: 'Donation of clothes and food to the partner NGO',
+        },
+        {
+            title: 'Confraternization of the procurement team',
+        },
+    ],
+    cardsImgText: [
+        {
+            img: 'logo-1.png',
+            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },
+        {
+            img: 'logo-2.png',
+            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },
+        {
+            img: 'logo-3.png',
+            text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },
+    ],
 });
 
 export default state;
