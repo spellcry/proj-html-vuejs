@@ -6,6 +6,11 @@
                 <CardsListComponent type="icon-title-text"/>
             </div>
         </section>
+        <section class="company">
+            <div class="container">
+                <JumbotronComponent type="two-cols"/>
+            </div>
+        </section>
         <section class="actions-projects">
             <div class="container">
                 <h4 class="pre-title">We do more for everyone</h4>
@@ -29,12 +34,14 @@
     import HeroComponent from './HeroComponent.vue';
     import CardsListComponent from './CardsListComponent.vue';
     import MenuComponent from './MenuComponent.vue';
+    import JumbotronComponent from './JumbotronComponent.vue';
 
     export default {
         components: {
             HeroComponent,
             CardsListComponent,
             MenuComponent,
+            JumbotronComponent,
         }
     }
 </script>
@@ -52,6 +59,9 @@
     }
     .strengths {
         background-color: $light-green;
+    }
+    .company {
+        position: relative;
     }
     .actions-projects {
         background-color: $dark;
@@ -80,6 +90,7 @@
         }
     }
     .strengths,
+    .company,
     .actions-projects,
     .feedback {
         padding-block: $section-padding-block;

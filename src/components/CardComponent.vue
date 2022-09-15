@@ -1,11 +1,14 @@
 <template>
     <div :class="[type,'card']">
+        <div :class="[id === undefined ? 'roles' : '','number']">
+            {{ id !== undefined ? id : card.numbers }}
+        </div>
         <font-awesome-icon v-if="isCardsIconTitleText" :icon="card.icon" class="icon"/>
-        <h3 v-if="isCardsIconTitleText || isCardsTitle" class="title">{{ card.title }}</h3>
+        <h3 v-if="isCardsIconTitleText || isCardsTitle || isCardsTitleText" class="title">{{ card.title }}</h3>
         <img v-if="isCardsImgText" :src="getImgSrc(card.img)" class="img"/>
         <div v-if="isCardsTitle" class="filter"></div>
         <img v-if="isCardsTitle" :src="getImgSrc(card.img)" class="bg-img"/>
-        <p v-if="isCardsIconTitleText || isCardsImgText" class="text">{{ card.text }}</p>
+        <p v-if="isCardsIconTitleText || isCardsImgText || isCardsTitleText" class="text">{{ card.text }}</p>        
     </div>
 </template>
 
@@ -19,7 +22,8 @@
             type: {
                 type: String,
                 required: true,
-            }
+            },
+            id: Number,
         },
         computed: {
             isCardsIconTitleText() {
@@ -31,6 +35,9 @@
             isCardsImgText() {
                 return this.type === "img-text";
             },
+            isCardsTitleText() {
+                return this.type === 'title-text';
+            }
         },
         methods: {
             getImgSrc(img) {
@@ -72,6 +79,16 @@
             .title {
                 z-index: 2;
                 color: white;
+            }
+        }
+        &.title-text {
+            padding: 0;
+            .number {
+                &.roles {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: $green;
+                }
             }
         }
         .img {

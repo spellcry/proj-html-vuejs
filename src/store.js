@@ -122,6 +122,45 @@ const state = Vue.observable({
             text: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         },
     ],
+    roles: [
+        {
+            title: 'Employees',
+            numbers: 256,
+            text: 'Lorem ipsum dolor sit amet.'
+        },
+        {
+            title: 'Partners',
+            numbers: 123,
+            text: 'Lorem ipsum dolor sit amet.'
+        },
+        {
+            title: 'Customers',
+            numbers: 52,
+            text: 'Lorem ipsum dolor sit amet.'
+        },
+    ],
+    process: [
+        {            
+            title: 'Collection of information',
+            text: 'Lorem ipsum dolor sit amet consectetur.',
+        },
+        {            
+            title: 'Strategic planning',
+            text: 'Lorem ipsum dolor sit amet consectetur.',
+        },
+        {            
+            title: 'Assignment of responsibilities',
+            text: 'Lorem ipsum dolor sit amet consectetur.',
+        },
+        {            
+            title: 'Formatting process',
+            text: 'Lorem ipsum dolor sit amet consectetur.',
+        },
+        {            
+            title: 'Continuity formalization',
+            text: 'Lorem ipsum dolor sit amet consectetur.',
+        },
+    ]
 });
 
 export default state;
