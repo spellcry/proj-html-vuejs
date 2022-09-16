@@ -155,6 +155,7 @@
         }
         &.two-cols {
             display: flex;
+            padding-inline: $section-padding-inline;
             .dots{
                 position: absolute;
                 left: 50%;                

@@ -34,6 +34,7 @@
             display: flex;
             align-items: center;
             height: 100%;
+            padding-inline: $section-padding-inline;
             background-color: rgba($color: #000, $alpha: 0.5);
             .pre-title {
                 text-transform: uppercase;

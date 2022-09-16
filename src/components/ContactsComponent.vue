@@ -67,6 +67,7 @@
         background-color: $dark-grey;
         color: $light-grey;
         padding-block: 1rem;
+        padding-inline: $section-padding-inline;
         .container {
             display: flex;
         }

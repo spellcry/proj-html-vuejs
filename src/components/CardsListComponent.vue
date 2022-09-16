@@ -75,6 +75,7 @@
         .container {
             max-width: 1600px;
             margin-inline: auto;
+            padding-inline: $section-padding-inline;
         }
     }
     .cards-list {

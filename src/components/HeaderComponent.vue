@@ -34,6 +34,7 @@
             position: absolute;
             width: 100%;
             padding-block: 1.5rem;
+            padding-inline: $section-padding-inline;
             color: $light-grey;
             text-transform: uppercase;
             font-weight: 600;

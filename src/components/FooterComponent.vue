@@ -46,6 +46,7 @@
 
     .main-footer {
         padding-top: $section-padding-block;
+        padding-inline: $section-padding-inline;
         background-color: $dark;
         color: $light-grey;
         .container {
