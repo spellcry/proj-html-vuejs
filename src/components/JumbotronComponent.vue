@@ -1,5 +1,81 @@
 <template>
     <div :class="[type,'jumbotron']">
+        <div v-if="isTwoCols" class="dots dots-top">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div v-if="isTwoCols" class="dots dots-bottom">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
         <div v-if="isTwoCols" class="col-50">
             <h4 class="pre-title">About the network</h4>
             <h2 class="title"><span class="accent">The</span> Company</h2>
@@ -79,6 +155,31 @@
         }
         &.two-cols {
             display: flex;
+            .dots{
+                position: absolute;
+                left: 50%;                
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: $dots-gap;
+                width: 150px;
+                height: 70px;
+                z-index: 999;
+                &.dots-top {
+                    top: 0;
+                    transform: translate(-50%, -50%);
+                }
+                &.dots-bottom {
+                    bottom: 0;
+                    transform: translate(-50%, 50%);
+                }
+                .dot {
+                    flex-basis: calc(calc(100% - calc($dots-gap * 8)) / 9);
+                    aspect-ratio: 1;
+                    background-color: rgba($color: $green, $alpha: 0.3);
+                    border-radius: 50%;
+                }
+            }
             .col-50 {
                 flex-basis: 50%;
                 padding-right: 5rem;
