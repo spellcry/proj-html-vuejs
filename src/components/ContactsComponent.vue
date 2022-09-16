@@ -1,5 +1,5 @@
 <template>
-    <nav class="contacts">
+    <nav :class="[type, 'contacts']">
         <div class="container">
             <div v-if="isHeader" class="open">
                 {{ getOpen }}
@@ -8,8 +8,8 @@
                 {{ getCopy }}
             </div>
             <ul class="contacts__info">
-                <li v-if="isHeader" class="tel">{{ getTel }}</li>
-                <li v-if="isHeader" class="mail">{{ getMail }}</li>
+                <li v-if="isHeader" class="tel"><font-awesome-icon class="icon" icon="fa-solid fa-phone"/>{{ getTel }}</li>
+                <li v-if="isHeader" class="mail"><font-awesome-icon class="icon" icon="fa-solid fa-envelope"/>{{ getMail }}</li>
                 <li class="linkedin"><font-awesome-icon icon="fa-brands fa-facebook-f" /></li>
                 <li class="twitter"><font-awesome-icon icon="fa-brands fa-twitter" /></li>
                 <li class="facebook"><font-awesome-icon icon="fa-brands fa-linkedin-in" /></li>
@@ -76,7 +76,13 @@
         }
         .contacts__info {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
+            .icon {
+                margin-right: 0.5rem;
+            }
+        }
+        &.footer {
+            background-color: $black;
         }
     }
 </style>

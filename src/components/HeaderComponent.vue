@@ -49,6 +49,8 @@
                     font-weight: 900;
                     z-index: 1;
                     .accent {
+                        padding: 0;
+                        background-color: transparent;
                         color: $green;
                     }
                     &::before {

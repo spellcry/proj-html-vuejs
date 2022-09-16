@@ -92,7 +92,9 @@
         .text {
             margin-bottom: 3rem;
             max-width: 65%;
-            text-align: center;            
+            text-align: center;  
+            font-size: 1.1rem;
+            color: rgba($color: $dark-grey, $alpha: 0.75);          
         }
     }
     .strengths,
