@@ -25,7 +25,7 @@
                     <li class="list-item contact text"><font-awesome-icon class="icon" icon="fa-solid fa-envelope" />hello@example.com</li>
                     <li class="list-item contact text"><font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />Main Avenue, 987</li>
                 </ul>
-                <input type="button" value="View Map" class="btn">
+                <input type="button" value="View Map" class="btn light">
             </div>
         </div>
         <ContactsComponent type="footer"/>
@@ -66,6 +66,15 @@
                         display: flex;
                         align-items: center;
                         color: $green;
+                        cursor: pointer;
+                        transition: all 200ms ease-in-out;
+                        &:hover {
+                            color: $green-brilliant;
+                            .icon {
+                                background-color: rgba($color: $green, $alpha: 1);
+                                color: white;
+                            }
+                        }
                         .icon {
                             margin-right: 1rem;
                             padding: 0.8rem;
@@ -73,12 +82,10 @@
                             border-radius: 50%;
                             font-size: 1.2rem;
                             background-color: rgba($color: $green, $alpha: 0.2);
+                            transition: all 200ms ease-in-out;
                         }
                     }
                 }                
-                .btn {
-                    background-color: transparent;
-                }
             }
         }
         .form {

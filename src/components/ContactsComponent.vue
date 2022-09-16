@@ -74,6 +74,14 @@
         .copy {
             margin-right: auto;
         }
+        .open,
+        .copy,
+        li {
+            cursor: pointer;
+            &:hover {
+                color: $green;
+            }
+        }
         .contacts__info {
             display: flex;
             gap: 2rem;

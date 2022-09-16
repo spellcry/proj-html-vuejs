@@ -100,6 +100,9 @@
                     &.light {
                         background-color: transparent;
                         color: $green;
+                        &:hover {
+                            background-color: rgba($color: #000000, $alpha: 0.2);
+                        }
                     }
                 }
             }
