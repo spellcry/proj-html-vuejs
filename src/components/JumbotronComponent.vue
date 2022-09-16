@@ -4,7 +4,7 @@
             <h4 class="pre-title">About the network</h4>
             <h2 class="title"><span class="accent">The</span> Company</h2>
             <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-            <CardsListComponent type="title-text"/>
+            <CardsListComponent type="title-text" content="company"/>
             <div class="ctas">
                 <div class="cta"><input type="button" class="btn" value="Get in touch"></div>
                 <div class="cta"><input type="button" class="btn light" value="Read more"></div>
@@ -14,7 +14,10 @@
             <img class="image-big" src="../assets/about-5.jpg">
         </div>
         <div v-if="isFullWidth" class="col">
-            
+            <h4 class="pre-title">How it works in practice</h4>
+            <h2 class="title"><span class="accent">Process</span> Management</h2>
+            <p class="text">We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.</p>
+            <CardsListComponent type="title-text" content="process"/>
         </div>
     </div>
 </template>
@@ -98,6 +101,17 @@
                         background-color: transparent;
                         color: $green;
                     }
+                }
+            }
+        }
+        &.full-width {
+            .col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .text {
+                    max-width: 800px;
+                    text-align: center;
                 }
             }
         }

@@ -19,6 +19,9 @@
                 <CardsListComponent type="title"/>
             </div>
         </section>
+        <section class="process">
+            <JumbotronComponent type="full-width"/>
+        </section>
         <section class="feedback">
             <div class="container">
                 <h4 class="pre-title">Customer Testimonials</h4>
@@ -75,6 +78,9 @@
             }
         }
     }
+    .process {
+        text-align: center;
+    }
     .feedback {
         background-color: $light-green;
         .title {
@@ -92,6 +98,7 @@
     .strengths,
     .company,
     .actions-projects,
+    .process,
     .feedback {
         padding-block: $section-padding-block;
     }

@@ -1,10 +1,15 @@
 <template>
-    <ul :class="[type,'cards-list']">
-        <li v-for="(card, index) in cards" :key="index" class="list-item">
-            <CardComponent v-if="!isCardsTitleText" :type="type" :card="card"/>
-            <CardComponent v-if="isCardsTitleText" :type="type" :card="card"/>
-        </li>
-    </ul>
+    <div class="cards-list__wrapper">
+        <div class="container">
+            <ul :class="[type, content,'cards-list']">
+                <li v-for="(card, index) in cards" :key="index" class="list-item">
+                    <CardComponent v-if="!isCardsTitleText" :type="type" :card="card"/>
+                    <CardComponent v-if="isCardsTitleText && content === 'company'" :type="type" :card="card"/>
+                    <CardComponent v-if="isCardsTitleText && content === 'process'" :type="type" :card="card" :id="index + 1"/>
+                </li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -17,7 +22,7 @@
             type: String,
             required: true,
         },
-        id: Number,
+        content: String,
     },
     computed: {
         cards() {
@@ -29,7 +34,14 @@
                 cards = state.cardsTitle;
             }
             if ( this.isCardsTitleText ) {
-                cards = state.roles;
+                switch (this.content) {
+                    case 'company':
+                        cards = state.roles;
+                        break;
+                    case 'process':
+                        cards = state.process;
+                        break;
+                }
             }
             if ( this.isCardsImgText ) {
                 cards = state.cardsImgText;
@@ -57,7 +69,14 @@
 
 <style lang="scss" scoped>
     @import '../styles/variables';
-
+    .cards-list__wrapper {
+        position: relative;
+        width: 100%;
+        .container {
+            max-width: 1600px;
+            margin-inline: auto;
+        }
+    }
     .cards-list {
         display: flex;
         flex-wrap: wrap;
@@ -70,6 +89,19 @@
         &.title-text {
             flex-wrap: nowrap;
             margin-bottom: $company-mb;
+            &.process {
+                margin-bottom: 0;
+                padding-inline: 1rem;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 22px;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $midlight-green;
+                }
+            }
             .list-item {
                 flex-basis: calc(calc(100% - calc($cards-gap * 2)) / 3);
             }

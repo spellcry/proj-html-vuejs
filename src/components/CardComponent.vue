@@ -1,7 +1,7 @@
 <template>
-    <div :class="[type,'card']">
-        <div :class="[id === undefined ? 'roles' : '','number']">
-            {{ id !== undefined ? id : card.numbers }}
+    <div :class="[id === undefined ? 'roles' : 'process',type,'card']">
+        <div class="number">
+            {{ id !== undefined ? '0' + id : card.numbers }}
         </div>
         <font-awesome-icon v-if="isCardsIconTitleText" :icon="card.icon" class="icon"/>
         <h3 v-if="isCardsIconTitleText || isCardsTitle || isCardsTitleText" class="title">{{ card.title }}</h3>
@@ -84,10 +84,25 @@
         &.title-text {
             padding: 0;
             .number {
-                &.roles {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: $green;
+            }
+            &.roles {
+                .number {
                     font-size: 2rem;
-                    font-weight: bold;
-                    color: $green;
+                }
+            }
+            &.process {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .number {
+                    padding: 0.7rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: $midlight-green;
+                    z-index: 1;
                 }
             }
         }
